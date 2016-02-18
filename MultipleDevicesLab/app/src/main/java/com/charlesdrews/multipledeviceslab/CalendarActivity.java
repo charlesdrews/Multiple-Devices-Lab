@@ -17,6 +17,7 @@ public class CalendarActivity extends AppCompatActivity {
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.calendar_recycler_view);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(CalendarActivity.this);
+
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
             layoutManager.setOrientation(LinearLayout.HORIZONTAL);
             recyclerView.setAdapter(new CalendarRecyclerAdapter(LinearLayout.HORIZONTAL));
@@ -24,6 +25,7 @@ public class CalendarActivity extends AppCompatActivity {
             layoutManager.setOrientation(LinearLayout.VERTICAL);
             recyclerView.setAdapter(new CalendarRecyclerAdapter(LinearLayout.VERTICAL));
         }
+
         recyclerView.setLayoutManager(layoutManager);
     }
 }
