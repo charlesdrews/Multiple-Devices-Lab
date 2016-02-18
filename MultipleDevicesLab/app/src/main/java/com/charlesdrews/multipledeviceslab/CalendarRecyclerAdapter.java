@@ -29,7 +29,7 @@ public class CalendarRecyclerAdapter extends
         mItems = new LinkedList<>();
         Calendar calendar = Calendar.getInstance(); // current date
         for (int i = 0; i < 20; i++) { // add 20 dates starting w/ current date
-            calendar.add(Calendar.DATE, i);
+            calendar.add(Calendar.DATE, 1);
             mItems.add(calendar.getTime());
         }
     }
